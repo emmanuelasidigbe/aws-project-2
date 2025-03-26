@@ -1,0 +1,11 @@
+
+.git
+*Dockerfile*
+*docker-compose*
+node_modules/
+
+template.yaml
+deployment-template.yaml
+
+# env files (can opt-in for committing if needed)
+.env*

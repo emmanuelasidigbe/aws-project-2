@@ -1,0 +1,17 @@
+{
+  "version": 0.0,
+  "Resources": [
+    {
+      "TargetService": {
+        "Type": "AWS::ECS::Service",
+        "Properties": {
+          "TaskDefinition": "arn:aws:ecs:eu-north-1:941377159625:task-definition/imagine-task:5",
+          "LoadBalancerInfo": {
+            "ContainerName": "imagine-container",
+            "ContainerPort": 3000
+          }
+        }
+      }
+    }
+  ]
+}
