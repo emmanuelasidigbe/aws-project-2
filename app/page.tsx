@@ -32,8 +32,13 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { Trash2 } from "lucide-react";
-import { Image } from "@prisma/client";
-
+type Image = {
+  id: number;
+  title: string;
+  key: string;
+  description: string;
+  url: string;
+};
 const ImageGallery = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [file, setFile] = useState<File | null>();
@@ -271,7 +276,7 @@ const ImageGallery = () => {
               ))}
           {currentImages.length === 0 && !pageloading && <div>no images</div>}
           {currentImages.map((image) => (
-            <ContextMenu key={image.url}>
+            <ContextMenu key={image.key}>
               <ContextMenuTrigger>
                 <Card className="bg-zinc-800 border-zinc-700 overflow-hidden hover:ring-1 hover:ring-zinc-600 transition-all duration-200 ">
                   <div className="aspect-square overflow-hidden">
