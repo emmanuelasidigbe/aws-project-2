@@ -5,9 +5,9 @@
       "TargetService": {
         "Type": "AWS::ECS::Service",
         "Properties": {
-          "TaskDefinition": "arn:aws:ecs:eu-north-1:941377159625:task-definition/imagine-task:5",
+          "TaskDefinition": "arn:aws:ecs:eu-north-1:941377159625:task-definition/project1:2",
           "LoadBalancerInfo": {
-            "ContainerName": "imagine-container",
+            "ContainerName": "project-container",
             "ContainerPort": 3000
           }
         }
